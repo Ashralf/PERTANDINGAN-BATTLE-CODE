@@ -1,0 +1,100 @@
+import java.util;
+public class Solution{
+  public static void main(String[] args){
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    Scanner sc = new Scanner(System.in);
+    double annualIncome = sc.nextDouble();
+    double taxableIncome, annualIncome2, annualIncome3, annualIncome4;
+    if (annualIncome <= 5000){
+      taxableIncome = annualIncome;
+      System.out.println("Annual Income: RM" + annualIncome);
+      System.out.println("Taxable Income Before Deduction: RM" + taxableIncome);
+      int maritalStatus = sc.nextInt();
+      if (maritalStatus == 0){
+        System.out.println("Marital Status: Single");
+        System.out.println("Total Deduction: RM0.0");
+        System.out.println("Total Tax Payable: RM" + taxableIncome);
+      }
+      else if (maritalStatus == 1){
+        taxableIncome = taxableIncome - 50;
+        System.out.println("Marital Status: Married");
+        System.out.println("Total Deduction: RM50.0");
+        System.out.println("Total Tax Payable: RM" + taxableIncome);
+      }
+    }
+    else if (annualIncome >= 5001 && annualIncome <= 35000){
+      annualIncome2 = annualIncome - 5000;
+      taxableIncome = annualIncome2 * 0.05;
+      System.out.println("Annual Income: RM" + annualIncome);
+      System.out.println("Taxable Income Before Deduction: RM" + taxableIncome);
+      int maritalStatus = sc.nextInt();
+      if (maritalStatus == 0){
+        System.out.println("Marital Status: Single");
+        System.out.println("Total Deduction: RM0.0");
+        System.out.println("Total Tax Payable: RM" + taxableIncome);
+      }
+      else if (maritalStatus == 1){
+        taxableIncome = taxableIncome - 50;
+        System.out.println("Total Deductions: RM50.0");
+        System.out.println("Total Tax Payable: RM" + taxableIncome);
+      }
+    }
+    else if (annualIncome >= 35001 && annualIncome <= 70000){
+      annualIncome2 = annualIncome - 35000;
+      annualIncome3 = annualIncome2 * 0.16;
+      taxableIncome = annualIncome3 + 900;
+      System.out.println("Annual Income: RM" + annualIncome);
+      System.out.println("Taxable Income Before Deduction: RM" + taxableIncome);
+      int maritalStatus = sc.nextInt();
+      if (maritalStatus == 0){
+        System.out.println("Marital Status: Single");
+        System.out.println("Total Deductions: RM0.0");
+        System.out.println("Total Tax Payable: RM" + taxableIncome);
+      }
+      else if (maritalStatus == 1){
+        taxableIncome = taxableIncome - 50;
+        System.out.println("Marital Status: Married");
+        System.out.println("Total Deductions: RM50.0");
+        System.out.println("Total Tax Payable: RM" + taxableIncome);
+      }
+    }
+    else if (annualIncome >= 70001 && annualIncome <= 250000){
+      annualIncome2 = annualIncome - 70000;
+      annualIncome3 = annualIncome2 * 0.24;
+      taxableIncome = annualIncome3 + 5600;
+      System.out.println("Annual Income: RM" + annualIncome);
+      System.out.println("Taxable Income Before Deduction: RM" + taxableIncome);
+      int maritalStatus = sc.nextInt();
+      if (maritalStatus == 0){
+        System.out.println("Marital Status: Single");
+        System.out.println("Total Deductions: RM0.0");
+        System.out.println("Total Tax Payable: RM" + taxableIncome);
+      }
+      else if (maritalStatus == 1){
+        taxableIncome = taxableIncome - 50;
+        System.out.println("Marital Status: Married");
+        System.out.println("Total Deductions: RM50.0");
+        System.out.println("Total Tax Payable: RM" + taxableIncome);
+      }
+    }
+    else if (annualIncome > 250000 && annualIncome <= 10000000){
+      annualIncome2 = annualIncome - 250000;
+      annualIncome3 = annualIncome2 * 0.28;
+      taxableIncome = annualIncome3 + 47900;
+      System.out.println("Annual Income: RM" + annualIncome);
+      System.out.println("Taxable Income Before Deduction: RM" + taxableIncome);
+      int maritalStatus = sc.nextInt();
+      if (maritalStatus == 0){
+        System.out.println("Marital Status: Single");
+        System.out.println("Total Deductions: RM0.0");
+        System.out.println("Total Tax Payable: RM" + taxableIncome);
+      }
+      else if (maritalStatus == 1){
+        taxableIncome = taxableIncome - 50;
+        System.out.println("Marital Status: Married");
+        System.out.println("Total Deductions: RM50.0");
+        System.out.println("Total Tax Payable: RM" + taxableIncome);
+      }
+    }
+  }
+}
