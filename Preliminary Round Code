@@ -1,0 +1,24 @@
+import java.util;
+public class Solution{
+  public static void main(String[] args){
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    Scanner sc = new Scanner(System.in);
+    char option = sc.next().charAt(0);
+    if (option == 'A'){
+      int distance = sc.nextInt();
+      double fuelEfficiency = sc.nextDouble();
+      double fuelPrice = sc.nextDouble();
+      double fuelCost = (distance/fuelEfficiency) * fuelPrice;
+      System.out.println("Fuel Cost: RM" + fuelCost);
+    }
+    else if (option == 'B'){
+      int distance = sc.nextInt();
+      double speed = sc.nextDouble();
+      double travelTime = distance/speed;
+      System.out.println("Travel Time: " + travelTime + "hours");
+    }
+    else  {
+      System.out.println("Error: Invalid selection. Please choose A or B");
+    }
+  }
+}
